@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // Connect to database
-    $conn = mysqli_connect('localhost', 'email', 'password', 'database');
+    $conn = mysqli_connect('localhost', 'username', 'password', 'verdictsupply');
 
     // Check for SQL injection
     $email = mysqli_real_escape_string($conn, $email);
@@ -25,12 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
+            //login execution here
             // Set session variables
             $_SESSION['email'] = $email;
             $_SESSION['id'] = $row['id'];
 
             // Redirect to home page
-            header('Location: home.php');
+            header('Location: index.php');
             exit();
         } else {
             echo "Invalid password.";
