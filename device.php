@@ -25,6 +25,7 @@ echo "Device: " . $device . "<br>";
 echo "Browser: " . $browser . "<br>";
 ?>
 
+
 <?php
 // Get device information
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
