@@ -9,7 +9,7 @@ from flask_socketio import SocketIO, emit
 from textblob import TextBlob
 import random
 
-app = Flask(V-bot)
+app = Flask(Vbot)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
