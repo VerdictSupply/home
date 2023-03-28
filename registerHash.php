@@ -25,8 +25,8 @@ if(isset($_POST['register'])){
   echo "Connected successfully";
   
   // Check if email or email already exists
-  $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email OR email = :email");
-  $stmt->execute(['email' => $email, 'email' => $email]);
+  $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+  $stmt->execute(['email' => $email]);
   $user = $stmt->fetch();
   if($user){
     if($user['email'] === $email) { $errors[] = "email already exists"; }
