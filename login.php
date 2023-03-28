@@ -9,9 +9,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
-  <meta name="author" content="Holger Koenemann">
-  <meta name="generator" content="Eleventy v2.0.0">
-  <meta name="HandheldFriendly" content="true">
   <title>Verdict - Login</title>
   <link rel="stylesheet" href="css/theme.min.css">
 
@@ -39,20 +36,20 @@
             <main class="mb-auto col-12">
               <h1>Login</h1>
               
-<form class="row">
+<form action="hash.php" class="row">
   <div class="col-12">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control form-control-lg bg-gray-800 border-dark" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control form-control-lg bg-gray-800 border-dark" id="email" aria-describedby="email address">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control form-control-lg bg-gray-800 border-dark" id="exampleInputPassword1">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control form-control-lg bg-gray-800 border-dark" id="password">
   </div>
   <div class="mb-3 form-check py-3">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">I wish to hear about upcoming offers and promotions.</label>
+    <input type="checkbox" class="form-check-input" id="checkbox">
+    <label class="form-check-label" for="checkbox">I wish to hear about upcoming offers and promotions.</label>
   </div>
   <button type="submit" class="btn btn-white btn-xl mb-4">Submit</button>
 </div>
