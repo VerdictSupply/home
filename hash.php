@@ -5,28 +5,28 @@ session_start();
 // Check if form submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Get form data
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
     // Connect to database
-    $conn = mysqli_connect('localhost', 'username', 'password', 'database');
+    $conn = mysqli_connect('localhost', 'email', 'password', 'database');
 
     // Check for SQL injection
-    $username = mysqli_real_escape_string($conn, $username);
+    $email = mysqli_real_escape_string($conn, $email);
     $password = mysqli_real_escape_string($conn, $password);
 
     // Hash password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Check if username and password match
-    $sql = "SELECT * FROM users WHERE username='$username'";
+    // Check if email and password match
+    $sql = "SELECT * FROM users WHERE email='$email'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
             // Set session variables
-            $_SESSION['username'] = $username;
+            $_SESSION['email'] = $email;
             $_SESSION['id'] = $row['id'];
 
             // Redirect to home page
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Invalid password.";
         }
     } else {
-        echo "Invalid username.";
+        echo "Invalid email address.";
     }
 
     // Close database connection
