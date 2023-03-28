@@ -83,7 +83,7 @@
   </a>
 </li>
 <li class="nav-item">
-  <a class="nav-link fs-5" href="shop.php" aria-label="The Verdict Shop">
+  <a class="nav-link fs-5" href="shop.php" aria-label="Verdict Shop">
     Shop
   </a>
 </li>
@@ -133,7 +133,7 @@ You must not:
 Republish material from (Add URL).
 Sell, rent or sub-license material from (Add URL).
 Reproduce, duplicate or copy material from (Add URL).
-Redistribute content from (Store Name) (unless content is specifically made for redistribution).
+Redistribute content from (Verdict Supply) (unless content is specifically made for redistribution).
 Disclaimer
 
 To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website (including, without limitation, any warranties implied by law in respect of satisfactory quality, fitness for purpose and/or the use of reasonable care and skill).
