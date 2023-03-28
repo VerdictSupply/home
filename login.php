@@ -36,7 +36,7 @@
             <main class="mb-auto col-12">
               <h1>Login</h1>
               
-<form action="hash.php" class="row">
+<form action="loginHash.php" class="row">
   <div class="col-12">
   <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
