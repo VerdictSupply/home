@@ -4,8 +4,16 @@ pip install chatterbot
 from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+# Import required libraries
+from flask import Flask, render_template, request
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
 
-app = Flask(__name__)
+# Create Flask app
+app = Flask(Verdict)
+
+# Create and train chatbot
+app = Flask(Verdict)
 bot = ChatBot('Bot')
 trainer = ChatterBotCorpusTrainer(bot)
 trainer.train('chatterbot.corpus.english')
@@ -24,6 +32,6 @@ if __name__ == "__main__":
 
 
 app = Flask(__name__)
-chatbot = ChatBot('MyChatBot')
+chatbot = ChatBot('Verdict')
 trainer = ChatterBotCorpusTrainer(chatbot)
 trainer.train("chatterbot.corpus.english")
