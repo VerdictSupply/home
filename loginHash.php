@@ -25,11 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
-            //login execution here
             // Set session variables
             $_SESSION['email'] = $email;
             $_SESSION['id'] = $row['id'];
-
+            // Login execution here
             // Redirect to home page
             header('Location: index.php');
             exit();
